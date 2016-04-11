@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Rendering list of data</title>
+	<link rel="stylesheet" href="../asset/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+	<div id="demo" class="container">
+		<h1>User name</h1>
+		<ul class="list-group">
+			<li class="list-group-item" v-for="name in names">{{ name }}</li>
+		</ul>
+		<input type="text"
+			   class="form-control"
+			   v-model="newName"
+			   placeholder="please input your love's name"
+			   @keyup.enter="addName()"
+		>
+	</div>
+	<script src="../asset/vue.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

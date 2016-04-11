@@ -1,0 +1,9 @@
+#tasks li button {
+	border: 0;
+	font-weight: bold;
+	background: none;
+	outline: none;
+	vertical-align: middle;
+	float: right;
+	color: #aaa;
+}

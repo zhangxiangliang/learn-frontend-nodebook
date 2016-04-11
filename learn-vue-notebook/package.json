@@ -1,0 +1,16 @@
+{
+  "name": "learn-vue-notebook",
+  "version": "1.0.0",
+  "description": "learn-vue-notebook",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+      "browser-sync": "^2.11.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "browser-sync start --server --no-notify --files='./*/*/*.html, ./*/*/*.js, ./*/*/js/*.js, ./*/*/*.css, ./*/*/css/*.css'"
+  },
+  "author": "lionis",
+  "license": "ISC"
+}

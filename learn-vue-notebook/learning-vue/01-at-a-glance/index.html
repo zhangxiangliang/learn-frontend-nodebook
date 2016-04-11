@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../asset/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./app.css">
+</head>
+<body> 
+    <div class="container">
+        <div id="tasks">
+            <div>
+                <h1>Tasks ({{ uncompleteds.length }}) </h1>
+
+                <ol class="list-group">
+                    <li v-for="task in tasks | inProcess"
+                        class="list-group-item"
+                    >
+                        <span @dblclick.prevent="editTask(task)">{{ task.body }}</span>
+
+                        <button @click.prevent="removeTask(task)">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+
+                        <button @click.prevent="completeTask(task)">
+                            <span class="glyphicon glyphicon-ok"></span>
+                        </button>
+
+                    </li>
+                </ol>
+            </div>
+
+            <form @submit.prevent="addTask">
+                <div class="form-group">
+                    <input v-model="newTask"
+                           v-el:new-task
+                           class="form-control" 
+                           placeholder="I need to...">
+                </div>
+                <button class="btn btn-primary">Add Task</button>
+            </form>
+            
+            <!-- <pre>{{ $data | json }}</pre> -->
+            <div v-if="completeds.length">
+                <h1>Complete ({{ completeds.length }})</h1>
+
+                <ol class="list-group">
+                    <li class="list-group-item"
+                        v-for=" task in tasks | filterBy true in 'completed' "
+                    >
+                        <span>{{ task.body }}</span>
+
+                        <button @click.prevent="removeTask(task)">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+
+                        <button @click.prevent="redoTask(task)">
+                            <span class="glyphicon glyphicon-repeat"></span>
+                        </button>
+                    </li>
+                </ol>
+
+                <button @click.prevent="clearComplete" class="btn btn-danger">Clear Complete</button>
+            </div>
+        </div>
+    </div>
+    <script src="../asset/vue.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

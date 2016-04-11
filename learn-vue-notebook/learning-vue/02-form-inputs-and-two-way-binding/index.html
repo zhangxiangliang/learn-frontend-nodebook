@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Form inputs and two way binding</title>
+	<link rel="stylesheet" href="../asset/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+	<div id="app" class="container">
+		<h1>{{ name }}</h1>
+		<input type="text"
+			   v-model="name"
+			   class="form-control"
+		>
+		<pre style="margin-top: 10px;">{{ $data | json }}</pre>
+	</div>
+	<script src="../asset/vue.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
