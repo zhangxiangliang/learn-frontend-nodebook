@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../asset/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="app.css">
+	<title>Base</title>
+</head>
+<body>
+	<div id="post" class="container" v-show="isVisible">
+		<button class="btn btn-danger  glyphicon glyphicon-remove-sign pull-right"
+				@click="isVisible = false"
+		>
+		</button>
+		<h1>熊本战队</h1>
+		<p>
+			熊本战队有两个很漂亮的妹子，还有几个不怎么帅的死基佬。
+			这不是谣言，是真的哦。支持的点个赞吧。
+		</p>
+		<button class="btn btn-default btn-lg"
+				@click="toggleLike"
+		>
+			<span class="glyphicon glyphicon-thumbs-up"></span> {{ likeNumber }}
+		</button>
+		<button class="btn btn-default btn-lg"
+				@click="toggleUnLike"
+		>
+			<span class="glyphicon glyphicon-thumbs-down"></span> {{ unlikeNumber }}
+		</button>
+	<pre style="margin-top: 10px;">{{ $data | json }}</pre>
+
+	</div>
+	<script src="../asset/vue.js"></script>
+	<script src="./app.js"></script>
+</body>
+</html>

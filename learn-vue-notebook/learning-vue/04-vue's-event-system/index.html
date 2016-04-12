@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../asset/bootstrap/css/bootstrap.min.css">
+	<title>Vue's event system</title>
+</head>
+<body>
+	<div id="demo" class="container">
+		<h1>Vue 事件处理</h1>
+
+
+		<h3>绑定点击事件</h3>
+		<button class="btn btn-primary"
+				@click="touchMe"
+		>
+			快点我
+		</button>
+		<h3>绑定键盘事件</h3>
+		<input type="text"
+			   v-model="i_love_you"
+			   @keyup.enter="keyUpEnter"
+			   placeholder="please input 'i love you' " 
+			   class="form-control" 
+		>
+	</div>
+	<script src="../asset/vue.js"></script>
+	<script src="./app.js"></script>
+</body>
+</html>
