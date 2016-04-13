@@ -19,16 +19,40 @@
 		</p>
 		<button class="btn btn-default btn-lg"
 				@click="toggleLike"
+				v-bind:class="{'active': liked}"
 		>
 			<span class="glyphicon glyphicon-thumbs-up"></span> {{ likeNumber }}
 		</button>
 		<button class="btn btn-default btn-lg"
 				@click="toggleUnLike"
+				v-bind:class="{'active': unliked}"
 		>
 			<span class="glyphicon glyphicon-thumbs-down"></span> {{ unlikeNumber }}
 		</button>
-	<pre style="margin-top: 10px;">{{ $data | json }}</pre>
-
+		<pre style="margin-top: 10px;">{{ $data | json }}</pre>
+	</div>
+	<div id="post1" class="container" v-show="isVisible">
+		<button class="btn btn-danger  glyphicon glyphicon-remove-sign pull-right"
+				@click="isVisible = false"
+		>
+		</button>
+		<h1>熊本战队2</h1>
+		<p>
+			熊本战队有两个很漂亮的妹子，还有几个不怎么帅的死基佬。
+			这不是谣言，是真的哦。支持的点个赞吧。
+		</p>
+		<button class="btn btn-default btn-lg"
+				@click="toggleLike"
+				v-bind:class="{'active': liked}"
+		>
+			<span class="glyphicon glyphicon-thumbs-up"></span> {{ likeNumber }}
+		</button>
+		<button class="btn btn-default btn-lg"
+				@click="toggleUnLike"
+				v-bind:class="{'active': unliked}"
+		>
+			<span class="glyphicon glyphicon-thumbs-down"></span> {{ unlikeNumber }}
+		</button>
 	</div>
 	<script src="../asset/vue.js"></script>
 	<script src="./app.js"></script>
