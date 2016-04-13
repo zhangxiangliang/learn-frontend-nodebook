@@ -1,1 +1,44 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../asset/bootstrap/css/bootstrap.min.css">
+	<style>
+		#demo input{
+			margin-top: 20px;
+		}
+	</style>
+	<title>Easy Filtering and Ordering</title>
+</head>
+<body>
+	<div id="demo" class="container">
+		<h1>IT'er の 日常</h1>
+		<input 	type="text"
+				v-model="search"
+				class="form-control" 
+		>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th v-for="column in columns">
+						<a 	href="#" 
+							@click="sortBy(column.en)"
+							class="active: "
+						>
+							{{ column.cn }}
+						</a>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr v-for="people in peoples | filterBy search | orderBy sortKey reverse">
+					<td>{{ people.name }}</td>
+					<td>{{ people.age }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script src="../asset/vue.js"></script>
+	<script src="./app.js"></script>
+</body>
+</html>
