@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../asset/bootstrap/css/bootstrap.min.css">
+	<title>Custom Filter</title>
+</head>
+<body>
+	<div id="demo" class="container">
+		<h1>颠倒的世界</h1>
+		<hr>
+		<p>{{ message | reverse true }}</p>
+	</div>
+	<div id="demo2" class="container">
+		<h1>单选过滤器</h1>
+		<hr>
+		<h4>选择性别：</h4>
+		<div class="radio">
+			<label for="all">
+				<input 	type="radio"
+						name="gender" 
+						value="全部"
+						v-model="gender"
+				>
+						全部
+			</label>
+			<label for="male">
+				<input 	type="radio" 
+						name="gender" 
+						value="男"
+						v-model="gender"
+				>
+				男
+			</label>
+			<label for="female">
+				<input 	type="radio" 
+						name="gender" 
+						value="女"
+						v-model="gender"
+				>
+				女
+			</label>
+		</div>
+		<h4>搜索结果：</h4>
+		<ul>
+			<li v-for="people in peoples | gender" 
+				style="margin-bottom: 10px;"
+			>
+				姓名 : {{ people.name }}<br>
+				性别 : {{ people.gender }}
+			</li>
+		</ul>
+	</div>
+	<script src="../asset/vue.js"></script>
+	<script src="./app.js"></script>
+</body>
+</html>
