@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Computer</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="./app.css">
+</head>
+<body>
+	<div id="app">
+		<div class="container">
+			<div class="head">
+				<input type="text" id="text" v-model="number">
+			</div>
+			<div class="body clearfix">
+				<div class="row thin">
+					<div class="btn" @click="storeNumber()">存储</div>
+					<div class="btn" @click="takeNumber()">取存</div>			
+					<div class="btn" @click="storeMethod('add')">累存</div>			
+					<div class="btn" @click="storeMethod('mult')">积存</div>
+					<div class="btn" @click="clearStore()">清存</div>						
+				</div>
+				<div class="row">
+					<div class="btn orange" @click="delNumber()">x</div>
+					<div class="btn orange" @click="clearAll()">全清</div>
+					<div class="btn orange" @click="clearScreen()">清屏</div>
+					<div class="btn black"  @click="single('reverse')">+/-</div>
+					<div class="btn black"  @click="single('reciprocal')">1/x</div>
+				</div>
+				<div class="row">
+					<div class="btn" @click="addNumber('7')">7</div>
+					<div class="btn" @click="addNumber('8')">8</div>
+					<div class="btn" @click="addNumber('9')">9</div>
+					<div class="btn" @click="setChar('/')">/</div>
+					<div class="btn black" @click="setChar('%')">%</div>
+				</div>
+				<div class="row">
+					<div class="btn" @click="addNumber('4')">4</div>
+					<div class="btn" @click="addNumber('5')">5</div>
+					<div class="btn" @click="addNumber('6')">6</div>
+					<div class="btn" @click="setChar('*')">*</div>
+					<div class="btn black" @click="single('sqrt')">√</div>
+				</div>
+				<div class="row">
+					<div class="btn" @click="addNumber('1')">1</div>
+					<div class="btn" @click="addNumber('2')">2</div>
+					<div class="btn" @click="addNumber('3')">3</div>
+					<div class="btn" @click="setChar('-')">-</div>
+					<div class="btn btn-double-height black"  @click="equal">=</div>
+					<div class="btn btn-double-width" @click="addNumber('0')">0</div>
+					<div class="btn"  @click="addNumber('.')">.</div>
+					<div class="btn" @click="setChar('+')">+</div>
+				</div>
+			</div>
+		</div>
+		<div>
+			<pre class="code">{{ $data | json}}</pre>
+		</div>
+	</div>
+	<script src="./vue.js" type="text/javascript"></script>
+	<script src="./app.js" type="text/javascript"></script>
+</body>
+</html>
