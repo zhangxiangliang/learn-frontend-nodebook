@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>计算器</title>
+	<link rel="stylesheet" href="./app.css">
+</head>
+<body>
+	<!-- DO  => HTML 是结构层 -->
+	<!-- CSS => 是表现层 -->
+	<!-- JS  => 是逻辑层 -->
+
+	<!-- 主体 container  -->
+	<!-- 按钮 btn -->
+	<!-- 输入框 input -->
+	<div class="container">
+		<div class="head">
+			<input type="text" id="dontsquare">
+		</div>
+		<div class="body">
+			<div class="btn">存储</div>
+			<div class="btn">取存</div>
+			<div class="btn">累存</div>
+			<div class="btn">积存</div>
+			<div class="btn">清存</div>
+			<div class="btn orange" onclick="computer.clearChar()">删除</div>
+			<div class="btn orange">全清</div>
+			<div class="btn orange">清屏</div>
+			<div class="btn black" onclick="computer.single('reverse')">+/-</div>
+			<div class="btn black" onclick="computer.single('reciprocal')">1/x</div>
+			<div class="btn" onclick="computer.addNumber('7')">7</div>
+			<div class="btn" onclick="computer.addNumber('8')">8</div>
+			<div class="btn" onclick="computer.addNumber('9')">9</div>
+			<div class="btn" onclick="computer.setChar('/')">/</div>
+			<div class="btn black" onclick="computer.setChar('%')">%</div>
+			<div class="btn" onclick="computer.addNumber('4')">4</div>
+			<div class="btn" onclick="computer.addNumber('5')">5</div>
+			<div class="btn" onclick="computer.addNumber('6')">6</div>
+			<div class="btn" onclick="computer.setChar('*')">*</div>
+			<div class="btn black" onclick="computer.single('sqrt')">√</div>
+			<div class="btn" onclick="computer.addNumber('1')">1</div>
+			<div class="btn" onclick="computer.addNumber('2')">2</div>
+			<div class="btn" onclick="computer.addNumber('3')">3</div>
+			<div class="btn" onclick="computer.setChar('-')">-</div>
+			<div class="btn black btn-height-double" onclick="computer.equal()">=</div>
+			<div class="btn btn-width-double" onclick="computer.addNumber('0')">0</div>
+			<div class="btn" onclick="computer.addNumber('.')">.</div>
+			<div class="btn" onclick="computer.setChar('+')">+</div>
+		</div>
+	</div>
+	<script src="./app.js"></script>
+</body>
+</html>
