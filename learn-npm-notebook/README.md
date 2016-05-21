@@ -12,5 +12,6 @@
 * [包的版本](05-package-version.md)
 * [配置文件](06-package-json.md)
 * [***破墙大作战 - nrm***](07-npm-registry-manage.md)
+
 ##### 进阶
 * 发布自己的包(未完成)
