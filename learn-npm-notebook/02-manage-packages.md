@@ -10,6 +10,14 @@ npm install <name> -g			# 简写
 ```
 npm install <name>
 ```
+##### 配置信息 - 项目依赖
+```
+npm install <name> --save
+```
+##### 配置信息 - 项目开发环境
+```
+npm install <name> --save-dev
+```
 
 ## 删除包
 ##### 全局
