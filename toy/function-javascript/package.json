@@ -1,0 +1,15 @@
+{
+  "name": "toy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "browser-sync start --server --no-notify --files='js/*.js, *.html'"
+  },
+  "author": "lionis",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.12.8"
+  }
+}

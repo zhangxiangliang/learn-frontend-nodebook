@@ -1,0 +1,108 @@
+/* 初始化 */
+* {
+	margin: 0px;
+	padding: 0px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html, body {
+	font-family: Courier, monospace;
+	margin: 0 auto;
+	width: 500px;
+	background: #25313e;
+}
+
+/* 头部 */
+.header {
+	margin-top: 50px;
+	text-align: center;
+	width: 500px;
+	margin-bottom: 20px;
+}
+.header h1 {
+	font-size: 50px;
+    font-weight: bold;
+	color: #506479;
+	margin-bottom: 20px;
+}
+.header a {
+    background: #232323;
+    color: #f9f6f2;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    line-height: 40px;
+}
+.header input {
+	padding: 10px;
+	outline: none;
+	width: 68%;
+}
+
+/* 内存 */
+.memorys {
+	background: #558E56;
+	height: 300px;
+	width: 500px;
+	border-radius: 5px;
+	padding: 10px;
+}
+.memory.head {
+	height: 40px;
+}
+.memory.head .title {
+	font-size: 20px;
+    font-weight: bold;
+	color: #fff;
+	text-align: center;
+}
+
+/* 页面 */
+.memory.boxs .box {
+	color: #fff;
+	border-radius: 5px;
+	width: 12.5%;
+	height: 180px;
+	background: #383838;
+	display: none;
+}
+.memory.boxs .box p {
+	line-height: 180px;
+	text-align: center;
+}
+.memory.minis {
+	padding: 20px 9px;
+}
+.memory.minis .mini {
+	height: 40px;
+	width: 10px;
+	background: #F7DE9B;
+	display: none;
+}
+/* 管理状态 */
+.manages {
+	height: 130px;
+	color: #fff;
+	text-align: center;
+}
+.manages .blue {
+	
+}
+.manages .manage {
+	padding: 10px;
+	height: 100px;
+	width: 100px;
+	background: #f55551;
+	border-radius: 100px;
+	display: inline-block;
+}
+.manages .manage .title {
+	text-align: center;
+	line-height: 40px;
+}
+.manages .manage .content {
+	text-align: center;
+	font-size: 30px;
+	line-height: 20px;
+}

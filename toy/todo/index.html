@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+	<meta charset="UTF-8">
+	<title>Todo List</title>
+	<link rel="stylesheet" href="assets/base.css">
+</head>
+<body>
+	<div id="todoapp">
+		<header id="header">
+			<h1>Todo List</h1>
+			<input id="new-todo" type="text" placeholder="需要做点什么呢？" autofocus>
+		</header>
+		<section id="main">
+			<input id="toggle-all" name="toggle-all" type="checkbox">
+			<label for="toggle-all">标记全部为完成</label>
+			<ul id="todo-list">
+			</ul>
+		</section>
+		<footer id="footer"></footer>
+	</div>
+	<div id="info">
+		<p>双击可以编辑任务</p>
+	</div>
+
+	<!-- 引入需要的文件脚本 -->
+	<script src="lib/jquery-2.1.1.min.js"></script>
+	<script src="lib/underscore-min.js"></script>
+	<script src="lib/backbone-min.js"></script>
+	<script src="lib/backbone.localStorage.js"></script>
+
+	<!-- Routers -->
+	<script src="js/Routers/Router.js"></script>
+	<!-- Models -->
+	<script src="js/Models/Todo.js"></script>
+	<!-- Collections -->
+	<script src="js/Collections/TodoCollection.js"></script>
+	<!-- Views -->
+	<script src="js/Views/AppView.js"></script>
+	<script src="js/Views/TodoView.js"></script>
+	<!-- Main -->
+	<script src="js/app.js"></script>
+</body>
+</html>

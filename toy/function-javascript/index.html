@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+	<meta charset="UTF-8">
+	<title>Function Javascript</title>
+</head>
+<body>
+	<script>
+		function existy(val) {
+			return val != null;
+		}
+		function truthy(val) {
+			return val !== false && existy(val);
+		}
+		function doWhen(cond, action) {
+			if(truthy(cond))
+				return action();
+			return undefined;
+		}
+	</script>
+	<!-- 引入 backbone -->
+	<script src="lib/underscore.min.js"></script>
+	<!-- 引入 jQuery -->
+	<script src="lib/jquery-2.1.1.min.js"></script>
+	
+	<!-- <script src="js/02-02-00-01.js"></script> -->
+	<script src="js/memoize.js"></script>
+	
+</body>
+</html>

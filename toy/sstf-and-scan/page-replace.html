@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+	<meta charset="UTF-8">
+	<title>内存管理</title>
+	<link rel="stylesheet" href="css/page-replace.css">
+</head>
+<body>
+	<header class="header">
+		<h1>内存管理</h1>
+		<!-- <input class="sequence" type="text"> -->
+		<!-- <a href="javascript:init()">新建</a> -->
+	</header>
+	<section>
+		<div class="manages">
+			<div class="manage use blue">
+				<p class="title">内存状态</p>
+				<p class="content">100%</p>
+			</div>
+			<div class="manage lose green">
+				<p class="title">缺页情况</p>
+				<p class="content">100%</p>
+			</div>
+			<div class="manage stack yellow">
+				<p class="title">队列剩余</p>
+				<p class="content">100%</p>
+			</div>
+		</div>
+		<div class="memorys container">
+			<div class="memory head">
+				<!-- <div class="close btn">x</div> -->
+				<div class="title">虚拟存储器</div>
+			</div>
+			<div class="memory boxs" id="boxs">
+				<div class="box">
+					<p class="info">空闲</p>
+				</div>
+				<div class="box">
+					<p class="info">空闲</p>
+				</div>
+				<div class="box">
+					<p class="info">空闲</p>
+				</div>
+				<div class="box">
+					<p class="info">空闲</p>
+				</div>
+				<div class="box">
+					<p class="info">空闲</p>
+				</div>
+				<div class="box">
+					<p class="info">空闲</p>
+				</div>
+				<div class="box">
+					<p class="info">空闲</p>
+				</div>
+			</div>
+			<div id="minis" class="memory minis">
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+				<span class="mini"></span>
+			</div>
+		</div>
+	</section>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.mixitup.js"></script>
+	<script src="js/page-replace.js"></script>
+</body>
+</html>

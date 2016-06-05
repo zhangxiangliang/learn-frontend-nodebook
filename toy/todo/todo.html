@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+	<meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no">
+	<meta charset="UTF-8">
+	<title>Todo List</title>
+	<style>
+		/* 初始化 */
+		html, body {
+		    margin: 0;
+		    padding: 0;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		/* 设置 input 的 盒模型 和 焦点框 */
+		input {
+			border-style:none;
+			outline:none;
+			-moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+			-o-box-sizing: border-box;
+			box-sizing: border-box;
+			border-radius: 0;
+		}
+		body {
+			width: 550px;
+			line-height: 1.4em;
+		    font-family: serif;
+		    background: #eaeaea;
+		    color: #4d4d4d;
+		    margin: 0 auto;
+		}
+		#todoapp {
+			border-top-left-radius: 2px;
+			border-top-right-radius: 2px;
+			position: relative;
+		}
+		#header {
+			padding-top: 15px;
+			border-radius: inherit;
+		}
+		#header h1 {
+			text-align: center;
+			font-size: 70px;
+		    color: #8d7d77;
+		}
+		#main:before {
+			content: '';
+			height: 15px;
+			background: #8d7d77;
+			/*border-bottom: 1px solid #6c615c;*/
+			display: block;
+		    border-top-left-radius: 1px;
+		    border-top-right-radius: 1px;
+		}
+		/* 提示 */
+		#info {
+			margin-top: 30px;
+			text-align: center;
+			font-size: 12px;
+			color: #aaa;
+		}
+		/* 主体 */
+		#main {
+		    color: #4d4d4d;
+			background: #fff;
+			position: relative;
+		}
+		/* 添加新任务输入框 */
+		#new-todo {
+			color: inherit;
+			width: 100%;
+			padding: 16px 16px 16px 60px;
+			border: none;
+		    font-size: 24px;
+			background: rgba(0, 0, 0, 0.02);
+			box-shadow: none;
+			border-bottom: 1px solid #aaa;
+		}
+		/* 笔记线 */
+		#red-line {
+			content: '';
+		    border-left: 1px solid #8d7d77;
+		    border-right: 1px solid #8d7d77;
+		    width: 2px;
+		    position: absolute;
+		    top: 0;
+		    left: 40px;
+		    height: 100%;
+		    z-index: 2;
+		}
+		/* 标记全部为完成按钮 */
+		#toggle-all {
+		    text-align: center;
+		    transform: rotate(90deg);
+		    border: none;
+	        -webkit-appearance: none;
+	        appearance: none;
+	        position: absolute;
+	        line-height: 24px;
+	        top: 30px;
+	        left: 10px;
+		}
+		#toggle-all:before {
+			content: '»';
+			font-size: 24px;
+			color: #d9d9d9;
+		}
+		#toggle-all:checked:before {
+			color: #737373;
+		}
+		/* 屏幕小于 600px 显示 */
+		@media (max-width: 600px) {
+			body {
+				width: 90%;
+			}
+			#header h1 {
+				font-size: 50px;
+			}
+			/*#new-todo {
+			    font-size: 28px;
+			    line-height: 28px;
+			    height: 100%;
+			}*/
+		}
+	</style>
+</head>
+<body>
+	<div id="todoapp">
+		<header id="header">
+			<h1>Todo List</h1>
+		</header>
+		<section id="main">
+			<div id="red-line"></div>
+			<input id="new-todo" type="text" placeholder="需要做点什么呢？" autofocus>
+			<!-- 标记全部为完成 -->
+			<input id="toggle-all" name="toggle-all" type="checkbox">
+			<ul id="todo-list">
+				
+			</ul>
+		</section>
+		<footer id="footer"></footer>
+	</div>
+	<div id="info">
+		<p>双击可以编辑任务</p>
+	</div>
+</body>
+</html>
